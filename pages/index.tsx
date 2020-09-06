@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState, ReactNode } from 'react'
 
-function Index() {
+function Index(): ReactNode {
   const [user, setUser] = useState({ name: '' })
 
   useEffect(() => {
-    fetch('/api').then(async (r: any) => {
+    fetch('/api').then(async (r: Response) => {
       const json = await r.json()
       setUser(json)
     })

@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "next",
-    "lint": "eslint /**/*.{ts,tsx}",
+    "lint": "eslint .",
     "test": "jest"
   },
   "dependencies": {
@@ -20,6 +20,7 @@
     "@typescript-eslint/parser": "^4.0.1",
     "eslint": "^7.8.1",
     "eslint-plugin-react": "^7.20.6",
+    "faker": "^5.1.0",
     "jest": "^26.4.2",
     "ts-jest": "^26.3.0",
     "typescript": "^4.0.2"
