@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "start": "next",
+    "test": "jest"
+  }
+}
