@@ -3,7 +3,7 @@
     "start": "next",
     "deploy": "next build",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest --runInBand"
   },
   "dependencies": {
     "@chakra-ui/core": "^1.0.0-rc.3",

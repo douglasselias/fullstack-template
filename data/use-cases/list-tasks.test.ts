@@ -21,5 +21,9 @@ describe('Listagem de tarefas', () => {
     const { sut, graphqlClientSpy } = makeSut()
     await sut.list()
     expect(graphqlClientSpy.url).toBe('/api/graphql')
+    expect(graphqlClientSpy.headers).toMatchObject({
+      'Content-type': 'application/json',
+    })
+    expect(JSON.stringify(graphqlClientSpy.body)).toBe(JSON.stringify({ query: '{ tasks: { id, description, isDone } }' }))
   })
 })

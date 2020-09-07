@@ -11,6 +11,7 @@ export class RemoteListTasks implements ListTasks {
   async list(): Promise<Task[]> {
     const response = await this.graphqlClient.request({
       url: this.url,
+      headers: { 'Content-type': 'application/json', },
       body: { query: '{ tasks: { id, description, isDone } }' }
     })
 
