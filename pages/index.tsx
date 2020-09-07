@@ -1,5 +1,5 @@
 import { useEffect, useState, ReactNode } from 'react'
-import { Button, Text, Box } from '@chakra-ui/core'
+import { Button, Text, Box, Input } from '@chakra-ui/core'
 
 function Index(): ReactNode {
   const [user, setUser] = useState({ name: '' })
@@ -25,9 +25,13 @@ function Index(): ReactNode {
   }, [])
 
   return (
-    <Box maxWidth="40" margin="0 auto">
+    <Box maxWidth="30rem" margin="0 auto">
       <Text>Hello, {user.name}</Text>
-      <Button colorScheme="blue">Hello</Button>
+      <Box display="flex">
+        <Input />
+        <Input type="date" />
+        <Button colorScheme="blue">Hello</Button>
+      </Box>
     </Box>
   )
 }

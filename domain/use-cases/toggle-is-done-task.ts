@@ -1,3 +1,3 @@
 export interface ToggleIsDoneTask {
-  toggle(): void
+  toggle(id: string): void
 }

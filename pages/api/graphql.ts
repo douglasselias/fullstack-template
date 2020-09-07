@@ -1,36 +1,65 @@
 import { ApolloServer, gql } from 'apollo-server-micro'
 
-import { User } from '@/domain/entities/user'
+import { User, Task } from '@/domain/entities'
 
 type Parent = string
 type Args = string
 type Context = string
-type Resolver = (parent: Parent, args: Args, context: Context) => unknown
+type Resolver = (parent: Parent, args: { id: string, description: string }, context: Context) => unknown
 
 const typeDefs = gql`
   type Query {
-    users: [User!]!
+    tasks: [Task!]!
   }
 
-  type User {
-    name: String
+  type Task {
+    id: String
+    description: String
+    isDone: Boolean
   }
 `
 
 type QueryRes = {
-  users: Resolver
+  tasks: Resolver
+}
+
+type MutationRes = {
+  addTask: Resolver
+  toggleIsDoneTask: Resolver
 }
 
 type R = {
   Query: QueryRes
+  Mutation: MutationRes
 }
+
+const dbTasks = []
 
 const resolvers: R = {
   Query: {
-    users(parent, args, context): User[] {
-      return [{ name: 'Nextjs' }]
+    tasks(parent, args, context): Task[] {
+      return dbTasks
     },
   },
+  Mutation: {
+    addTask(parent, args, context): Task | void {
+      const task: Task = {
+        id: new Date().getTime().toString(),
+        description: args.description,
+        isDone: false
+      }
+      dbTasks.push(task)
+      // return {id, description, }
+    },
+    toggleIsDoneTask(parent, args, context): void {
+      dbTasks.forEach((task: Task) => {
+        if (task.id === args.id) {
+          task.isDone = !task.isDone
+        }
+      })
+      // return {}
+    }
+  }
 }
 
 const apolloServer = new ApolloServer({ typeDefs, resolvers })
