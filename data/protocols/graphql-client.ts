@@ -8,7 +8,7 @@ export type HttpRequest = {
   body: HttpRequestBody
 }
 
-type HttpRequestBody = HttpRequestQuery | HttpRequestMutation
+export type HttpRequestBody = HttpRequestQuery | HttpRequestMutation
 
 type HttpRequestQuery = {
   query: string
@@ -21,7 +21,7 @@ type HttpRequestMutation = {
 
 export type HttpResponse<Data = any> = {
   errors: CustomError[]
-  data: Data
+  data?: Data
 }
 
 type CustomError = {
