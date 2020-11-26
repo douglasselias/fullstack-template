@@ -1,4 +1,9 @@
-import { GraphQLClient, HttpRequest, HttpResponse, HttpRequestBody } from '@/data/protocols'
+import {
+  GraphQLClient,
+  HttpRequest,
+  HttpResponse,
+  HttpRequestBody,
+} from '@/data/protocols'
 import { Task } from '@/domain/entities'
 
 export class GraphQLClientSpy<R = Task[]> implements GraphQLClient<R> {

@@ -12,7 +12,7 @@ function makeSut(): SUT {
   const sut = new RemoteListTasks('/api/graphql', spy)
   return {
     sut,
-    graphqlClientSpy: spy
+    graphqlClientSpy: spy,
   }
 }
 
@@ -24,6 +24,8 @@ describe('Listagem de tarefas', () => {
     expect(graphqlClientSpy.headers).toMatchObject({
       'Content-type': 'application/json',
     })
-    expect(JSON.stringify(graphqlClientSpy.body)).toBe(JSON.stringify({ query: '{ tasks: { id, description, isDone } }' }))
+    expect(JSON.stringify(graphqlClientSpy.body)).toBe(
+      JSON.stringify({ query: '{ tasks: { id, description, isDone } }' })
+    )
   })
 })

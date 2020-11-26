@@ -6,13 +6,13 @@ export class RemoteListTasks implements ListTasks {
   constructor(
     private readonly url: string,
     private readonly graphqlClient: GraphQLClient<Task[]>
-  ) { }
+  ) {}
 
   async list(): Promise<Task[]> {
     const response = await this.graphqlClient.request({
       url: this.url,
-      headers: { 'Content-type': 'application/json', },
-      body: { query: '{ tasks: { id, description, isDone } }' }
+      headers: { 'Content-type': 'application/json' },
+      body: { query: '{ tasks: { id, description, isDone } }' },
     })
 
     return response.data

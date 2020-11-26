@@ -20,7 +20,7 @@ function tasks(): Promise<Task[]> {
   return dbListTasks.list()
 }
 
-function addTask({ args }: TaskArgs): Task | void {
+async function addTask({ args }: TaskArgs): Promise<Task> {
   const task: Task = {
     id: new Date().getTime().toString(),
     description: args.description,
@@ -32,7 +32,7 @@ function addTask({ args }: TaskArgs): Task | void {
   return task
 }
 
-function toggleIsDoneTask({ args }: TaskArgs): Task[] {
+async function toggleIsDoneTask({ args }: TaskArgs): Promise<Task[]> {
   dbTasks.forEach((task: Task) => {
     if (task.id === args.id) {
       task.isDone = !task.isDone

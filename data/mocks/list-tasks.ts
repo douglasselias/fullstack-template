@@ -3,11 +3,7 @@ import faker from 'faker'
 import { Task } from '@/domain/entities'
 
 export function mockTaskList(): Task[] {
-  return [
-    mockTask(),
-    mockTask(),
-    mockTask(),
-  ]
+  return [mockTask(), mockTask(), mockTask()]
 }
 
 function mockTask(): Task {

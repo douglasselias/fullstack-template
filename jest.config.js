@@ -1,9 +1,9 @@
 module.exports = {
   transform: {
-    ".+\\.(ts|tsx)$": "ts-jest"
+    '.+\\.(ts|tsx)$': 'ts-jest',
   },
-  testEnvironment: "node",
+  testEnvironment: 'node',
   moduleNameMapper: {
-    "@/(.*)": "<rootDir>/$1"
-  }
+    '@/(.*)': '<rootDir>/$1',
+  },
 }
