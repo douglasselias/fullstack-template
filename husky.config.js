@@ -1,3 +1,5 @@
 module.exports = {
-  'pre-commit': 'npm run precommit',
+  hooks: {
+    'pre-commit': 'npm run precommit',
+  },
 }
