@@ -1,5 +1,5 @@
-import { Task } from '@/domain/entities'
-import { ListTasks } from '@/domain/use-cases'
+import { Task } from '@/entities'
+import { ListTasks } from '@/use-cases'
 import { resolverArgs } from './_utils'
 
 const dbTasks = []

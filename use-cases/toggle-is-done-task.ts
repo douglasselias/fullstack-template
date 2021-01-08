@@ -1,3 +1,3 @@
 export interface ToggleIsDoneTask {
-  toggle(id: string): void
+  toggle(id: string): Promise<void>
 }

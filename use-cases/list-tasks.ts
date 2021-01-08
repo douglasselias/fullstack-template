@@ -1,4 +1,4 @@
-import { Task } from '@/domain/entities'
+import { Task } from '@/entities'
 
 export interface ListTasks {
   list(): Promise<Task[]>

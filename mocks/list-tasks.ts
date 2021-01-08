@@ -1,6 +1,6 @@
 import faker from 'faker'
 
-import { Task } from '@/domain/entities'
+import { Task } from '@/entities'
 
 export function mockTaskList(): Task[] {
   return [mockTask(), mockTask(), mockTask()]

@@ -4,6 +4,7 @@
     "start": "next",
     "deploy": "next build",
     "---> Code Quality": "",
+    "ts": "tsc",
     "lint": "eslint --fix .",
     "lint:css": "stylelint \"**/*.css\"",
     "format": "prettier --write .",
