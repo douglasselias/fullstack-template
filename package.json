@@ -1,11 +1,17 @@
 {
   "scripts": {
+    "---> Code Execution": "",
     "start": "next",
     "deploy": "next build",
+    "---> Code Quality": "",
     "lint": "eslint --fix .",
+    "lint:css": "stylelint \"**/*.css\"",
     "format": "prettier --write .",
-    "format:css": "stylelint \"**/*.css\"",
-    "test": "jest --runInBand"
+    "test": "jest --runInBand --silent",
+    "test:coverage": "npm test --coverage",
+    "---> Git Hooks": "",
+    "precommit": "npm run lint:css && npm run format",
+    "prepush": "npm run lint && npm test"
   },
   "dependencies": {
     "apollo-server-micro": "^2.19.1",
@@ -14,6 +20,8 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@testing-library/react": "^11.2.3",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.20",
@@ -24,6 +32,7 @@
     "autoprefixer": "^10.2.1",
     "eslint": "^7.17.0",
     "eslint-plugin-react": "^7.22.0",
+    "husky": "^4.3.7",
     "jest": "^26.6.3",
     "postcss": "^8.2.3",
     "prettier": "^2.2.1",
