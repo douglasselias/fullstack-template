@@ -3,7 +3,7 @@
     "---> Code Execution": "",
     "start": "next",
     "deploy": "next build",
-    "---> Code Quality": "",
+    "---> Code Quality": "echo 0",
     "ts": "tsc",
     "lint": "eslint --fix .",
     "lint:css": "stylelint \"**/*.css\"",
