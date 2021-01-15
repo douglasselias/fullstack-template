@@ -11,7 +11,7 @@ type ResolverArgs<Args> = (
   args: Args,
   context: unknown,
   info: unknown
-) => any
+) => unknown
 
 type ResolverFunction<Args, Return> = (params: {
   parent: unknown
