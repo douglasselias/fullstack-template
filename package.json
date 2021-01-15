@@ -14,11 +14,6 @@
     "precommit": "npm run lint:css && npm run format",
     "prepush": "npm run lint && npm test"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "dependencies": {
     "apollo-server-micro": "^2.19.2",
     "next": "^10.0.5",
