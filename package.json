@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "---> Code Execution": "",
+    "---> Code Execution": "echo 0",
     "start": "next",
     "deploy": "next build",
     "---> Code Quality": "echo 0",
