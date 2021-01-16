@@ -1,20 +1,20 @@
 {
   "scripts": {
-    "---> Code Execution": "echo 0",
+    "-------------------> Code Execution <-------------------": "",
     "start": "next",
     "deploy": "next build",
-    "---> Code Quality": "echo 0",
-    "ts": "tsc",
+    "-------------------> Code Quality <-------------------": "",
+    "ts": "tsc --noEmit",
     "lint": "eslint --fix .",
     "lint:css": "stylelint \"**/*.css\"",
     "format": "prettier --write .",
-    "test": "jest --runInBand --silent",
+    "test": "jest --runInBand --silent --bail",
     "test:verbose": "jest --runInBand",
+    "test:git": "jest --runInBand --bail --findRelatedTest",
     "test:coverage": "jest --runInBand --coverage",
-    "---> Git Hooks": "",
+    "-------------------> Git Hooks <-------------------": "",
     "precommit": "npm run ts && npm run lint && npm run lint:css && npm run format",
-    "prepush": "npm test",
-    "staged": "lint-staged"
+    "prepush": "npm test"
   },
   "dependencies": {
     "apollo-server-micro": "^2.19.2",

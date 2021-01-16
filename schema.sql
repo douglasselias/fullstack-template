@@ -1,0 +1,6 @@
+CREATE TABLE task (
+  id SERIAL PRIMARY KEY,
+  id VARCHAR PRIMARY KEY,
+  description VARCHAR NOT NULL,
+  is_done BOOLEAN NOT NULL
+);

@@ -10,11 +10,13 @@
 
 ## Use Cases
 
-- Login
-- Logout
-- Register
-- Password recovery
+<!-- - Login -->
+<!-- - Logout -->
+<!-- - Register -->
+<!-- - Password recovery -->
+
 - Add task
-- Edit task
-- Remove task
+  <!-- - Edit task -->
+  <!-- - Remove task -->
 - List tasks
+- Toggle task done
