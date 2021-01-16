@@ -4,6 +4,7 @@ module.exports = {
     '<rootDir>/**/*.{ts,tsx}',
     '!<rootDir>/**/index.ts',
     '!<rootDir>/pages/**',
+    '!<rootDir>/main/**',
     '!**/*.d.ts',
   ],
   coverageThreshold: {
