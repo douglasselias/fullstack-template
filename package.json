@@ -12,7 +12,8 @@
     "test:coverage": "jest --runInBand --coverage",
     "---> Git Hooks": "",
     "precommit": "npm run ts && npm run lint && npm run lint:css && npm run format",
-    "prepush": "npm test"
+    "prepush": "npm test",
+    "staged": "lint-staged"
   },
   "dependencies": {
     "apollo-server-micro": "^2.19.2",

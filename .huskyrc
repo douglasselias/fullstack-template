@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "pre-commit": "npm run precommit",
+    "pre-commit": "npm run staged",
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
     "pre-push": "npm run prepush",
   }
