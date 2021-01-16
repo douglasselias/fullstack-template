@@ -1,5 +1,5 @@
 import { Task } from '@/entities'
 
-export interface ListTasks {
+export interface ListTasksUseCase {
   list(): Promise<Task[]>
 }
