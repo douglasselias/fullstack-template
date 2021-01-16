@@ -5,6 +5,7 @@ module.exports = {
     '!<rootDir>/**/index.ts',
     '!<rootDir>/pages/**',
     '!<rootDir>/main/**',
+    '!<rootDir>/components/**',
     '!**/*.d.ts',
   ],
   coverageThreshold: {

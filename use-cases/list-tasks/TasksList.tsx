@@ -4,7 +4,7 @@ export function TasksList(props: Props): JSX.Element {
   const { tasks } = props
 
   return (
-    <ul>
+    <ul className="list-disc">
       {tasks.map((task) => (
         <li key={task.id}>{task.description}</li>
       ))}

@@ -10,16 +10,18 @@ export function AddTaskPresentation(props: Props): JSX.Element {
   async function onClickAddTask() {
     await addTaskUseCase.add(description)
     callback()
+    setDescription('')
   }
 
   return (
-    <>
+    <div className="flex my-2">
       <Input
+        value={description}
         onChange={(value) => setDescription(value)}
         placeholder="Digite uma tarefa"
       />
       <Button onClick={onClickAddTask}>Adicionar</Button>
-    </>
+    </div>
   )
 }
 
