@@ -1,3 +1,3 @@
-export interface AddTask {
+export interface AddTaskUseCase {
   add(description: string): Promise<void>
 }
