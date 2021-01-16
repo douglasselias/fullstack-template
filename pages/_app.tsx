@@ -1,10 +1,9 @@
-import { ReactNode } from 'react'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import '../styles/index.css'
 
-function App({ Component, pageProps }: AppProps): ReactNode {
+function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
