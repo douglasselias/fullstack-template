@@ -1,12 +1,7 @@
-import { ReactNode } from 'react'
+import { IndexPage } from '@/main/index.page'
 
-function Index(): ReactNode {
-  return (
-    <>
-      <h1 className="text-white">hello</h1>
-      <button className="btn-blue">jdflksdjf</button>
-    </>
-  )
+function Index(): JSX.Element {
+  return <IndexPage />
 }
 
 export default Index

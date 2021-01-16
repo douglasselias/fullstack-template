@@ -1,20 +1,24 @@
-import { useRef } from 'react'
+import { useState } from 'react'
 
+import { Input, Button } from '@/components/base'
 import { AddTaskUseCase } from './add-task.usecase'
 
-export function AddTaskPresentation(props: Props) {
+export function AddTaskPresentation(props: Props): JSX.Element {
   const { addTaskUseCase, callback } = props
-  const inputTask = useRef<HTMLInputElement>()
+  const [description, setDescription] = useState('')
 
-  async function handleAddTask() {
-    await addTaskUseCase.add(inputTask.current.value)
+  async function onClickAddTask() {
+    await addTaskUseCase.add(description)
     callback()
   }
 
   return (
     <>
-      <input ref={inputTask} placeholder="Digite uma tarefa" />
-      <button onClick={handleAddTask}>Adicionar</button>
+      <Input
+        onChange={(value) => setDescription(value)}
+        placeholder="Digite uma tarefa"
+      />
+      <Button onClick={onClickAddTask}>Adicionar</Button>
     </>
   )
 }
