@@ -1,12 +1,12 @@
 import { Task } from '@/entities'
-import { ListTasks } from '@/use-cases'
+// import { ListTasks } from '@/use-cases'
 import { resolverArgs } from './_utils'
 
 const dbTasks = []
 
 export const resolvers = {
   Query: {
-    ['tasks']: resolverArgs(tasks),
+    // ['tasks']: resolverArgs(tasks),
   },
 
   Mutation: {
@@ -15,10 +15,10 @@ export const resolvers = {
   },
 }
 
-function tasks(): Promise<Task[]> {
-  const dbListTasks = new DBListTasks(dbTasks)
-  return dbListTasks.list()
-}
+// function tasks(): Promise<Task[]> {
+//   const dbListTasks = new DBListTasks(dbTasks)
+//   return dbListTasks.list()
+// }
 
 async function addTask({ args }: TaskArgs): Promise<Task> {
   const task: Task = {
@@ -44,10 +44,10 @@ async function toggleIsDoneTask({ args }: TaskArgs): Promise<Task[]> {
 
 type TaskArgs = { args: Task }
 
-class DBListTasks implements ListTasks {
-  constructor(private db: Task[]) {}
+// class DBListTasks implements ListTasks {
+//   constructor(private db: Task[]) {}
 
-  async list(): Promise<Task[]> {
-    return this.db
-  }
-}
+//   async list(): Promise<Task[]> {
+//     return this.db
+//   }
+// }
