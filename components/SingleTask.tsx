@@ -1,11 +1,12 @@
-import { Task } from '@/entities'
+// import { Task } from '@/entities'
 
-export function SingleTask(props: Props) {
-  const { task } = props
+// export function SingleTask(props: Props) {
+//   const { task } = props
 
-  return <li key={task.id}>{task.description}</li>
-}
+//   return <li key={task.id}>{task.description}</li>
+// }
 
-type Props = {
-  task: Task
-}
+// type Props = {
+//   task: Task
+// }
+export {}

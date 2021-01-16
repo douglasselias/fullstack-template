@@ -1,3 +1,4 @@
-export function generateRandomId() {
-  return new Date().getMilliseconds().toString()
-}
+// export function generateRandomId() {
+//   return new Date().getMilliseconds().toString()
+// }
+export {}
