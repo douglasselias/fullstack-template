@@ -10,7 +10,7 @@ test('Deve adicionar tarefa corretamente', async () => {
   const tasks: Task[] = [
     { id: '123', description: 'description', isDone: false },
   ]
-  render(<TasksList tasks={tasks} />)
+  render(<TasksList tasks={tasks} toggleIsDoneTaskInteractor={null} />)
 
   const task = screen.getByText(/description/i)
 

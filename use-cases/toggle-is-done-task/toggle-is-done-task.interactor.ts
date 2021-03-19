@@ -6,7 +6,7 @@ export class ToggleIsDoneTaskInteractor implements ToggleIsDoneTaskUseCase {
     private readonly toggleIsDoneTaskRepository: ToggleIsDoneTaskRepository
   ) {}
 
-  toggle(id: string) {
+  toggle(id: string): void {
     this.toggleIsDoneTaskRepository.toggle(id)
   }
 }

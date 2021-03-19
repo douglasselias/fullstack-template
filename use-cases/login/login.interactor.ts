@@ -6,6 +6,7 @@ interface LoginFetch {
 
 export class LoginInteractorHttp implements LoginUseCase {
   constructor(private readonly repository: LoginFetch) {}
+
   async login(email: string, password: string): Promise<boolean> {
     return this.repository.login(email, password)
   }
