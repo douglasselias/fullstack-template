@@ -6,9 +6,9 @@ class AddTaskRepositoryStub implements AddTaskRepository {
   add = jest.fn()
 }
 
-const idStub = '123'
 class IdGeneratorStub implements IdGenerator {
-  generate = jest.fn(() => idStub)
+  id = 'abc-123'
+  generate = jest.fn(() => this.id)
 }
 
 it('adds task correctly', async () => {
@@ -23,7 +23,7 @@ it('adds task correctly', async () => {
   await interactor.add(description)
 
   expect(addTaskRepositoryStub.add).toHaveBeenCalledWith({
-    id: idStub,
+    id: idGeneratorStub.id,
     description,
     isDone: false,
   })

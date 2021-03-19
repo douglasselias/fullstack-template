@@ -12,7 +12,7 @@ export class AddTaskInteractor implements AddTaskUseCase {
 
   async add(description: string): Promise<void> {
     const task: Task = {
-      id: this.idGenerator.generate(),
+      id: await this.idGenerator.generate(),
       description,
       isDone: false,
     }

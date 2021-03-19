@@ -1,3 +1,3 @@
 export interface AddTaskUseCase {
-  add(description: string): Promise<void>
+  add(description: string): MaybePromise<void>
 }

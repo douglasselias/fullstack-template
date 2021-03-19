@@ -5,7 +5,7 @@ import { ListTasksUseCase } from './list-tasks.usecase'
 export class ListTasksInteractor implements ListTasksUseCase {
   constructor(private readonly repository: ListTasksRepository) {}
 
-  list(): Promise<Task[]> {
+  list(): MaybePromise<Task[]> {
     return this.repository.list()
   }
 }

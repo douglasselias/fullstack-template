@@ -1,3 +1,3 @@
-export interface ToggleIsDoneTask {
-  toggle(id: string): Promise<void>
+export interface ToggleIsDoneTaskUseCase {
+  toggle(id: string): MaybePromise<void>
 }
