@@ -47,6 +47,7 @@ export function IndexPage(): JSX.Element {
       <TasksList
         tasks={tasks}
         toggleIsDoneTaskInteractor={toggleIsDoneTaskInteractor}
+        callback={callback}
       />
     </>
   )

@@ -2,7 +2,7 @@ import { Task } from '@/entities'
 import { ToggleIsDoneTaskUseCase } from '../toggle-is-done-task/toggle-is-done-task.usecase'
 
 export function TasksList(props: Props): JSX.Element {
-  const { tasks, toggleIsDoneTaskInteractor } = props
+  const { tasks, toggleIsDoneTaskInteractor, callback } = props
 
   return (
     <ul className="list-disc">
@@ -10,7 +10,10 @@ export function TasksList(props: Props): JSX.Element {
         <li
           key={task.id}
           className={task.isDone ? 'line-through' : ''}
-          onClick={() => toggleIsDoneTaskInteractor.toggle(task.id)}
+          onClick={() => {
+            toggleIsDoneTaskInteractor.toggle(task.id)
+            callback()
+          }}
         >
           {task.description}
         </li>
@@ -22,4 +25,5 @@ export function TasksList(props: Props): JSX.Element {
 type Props = {
   tasks: Task[]
   toggleIsDoneTaskInteractor: ToggleIsDoneTaskUseCase
+  callback(): void
 }
