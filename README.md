@@ -10,13 +10,14 @@
 
 ## Use Cases
 
-- Login
-- Logout
-- Register
-- Password recovery
-
-- Add task
-- Edit task
-- Remove task
-- List tasks
-- Toggle task done
+- Event Storming
+- DDD
+- E-commerce
+- Design System (Atomic Design)
+- Docker?
+- PWA
+- Redis
+- SQS AWS
+- Auth0 / Social Login
+- Clean Architecure
+- Register as a Consumer or Store
