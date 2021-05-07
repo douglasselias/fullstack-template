@@ -15,7 +15,7 @@
 - E-commerce
 - Design System (Atomic Design)
 - Docker?
-- PWA
+- PWAsdfsdfdsfsdf
 - Redis
 - SQS AWS
 - Auth0 / Social Login
