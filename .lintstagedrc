@@ -1,3 +1,0 @@
-{
-  "*.{js,ts,tsx,md,yml,css,json}": "npm run precommit",
-}
