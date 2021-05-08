@@ -1,0 +1,8 @@
+{
+  "transform": {
+    "^.+\\.(tsx)$": "<rootDir>/node_modules/babel-jest",
+    ".+\\.(ts)$": "ts-jest"
+  },
+  "testEnvironment": "jsdom",
+  "setupFilesAfterEnv": ["<rootDir>/jest-setup.ts"]
+}
