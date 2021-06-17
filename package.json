@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "next",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "^10.2.0",
