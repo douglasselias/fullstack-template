@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx --no-install prettier --write .
+npx eslint --fix && npx --no-install prettier --write .
