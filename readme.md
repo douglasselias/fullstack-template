@@ -18,3 +18,7 @@
 # Jest
 
 - npm i -D jest ts-jest @types/jest
+
+# Lint Staged
+
+- npx mrm@2 lint-staged
