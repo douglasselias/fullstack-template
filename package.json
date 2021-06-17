@@ -5,7 +5,7 @@
     "format": "prettier --write",
     "commit": "commitlint --edit",
     "test": "jest --watch --bail",
-    "test:cov": "jest --bail --coverage --findRelatedTests",
+    "test:cov": "jest --bail --coverage",
     "prepare": "husky install",
     "staged": "lint-staged"
   },
