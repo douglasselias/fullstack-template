@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "next",
+    "ts": "tsc",
     "lint": "eslint --fix .",
     "format": "prettier --write .",
     "test": "jest",
