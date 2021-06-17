@@ -2,9 +2,11 @@
   "scripts": {
     "start": "next",
     "ts": "tsc",
+    "commit": "commitlint --edit",
     "lint": "eslint --fix .",
     "format": "prettier --write .",
-    "test": "jest",
+    "test": "jest --watch --bail --runInBand",
+    "test:cov": "jest --bail --runInBand --coverage",
     "prepare": "husky install"
   },
   "dependencies": {
