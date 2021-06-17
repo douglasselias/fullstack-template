@@ -1,6 +1,8 @@
 {
   "scripts": {
     "start": "next",
+    "lint": "eslint --fix .",
+    "format": "prettier --write .",
     "test": "jest",
     "prepare": "husky install"
   },
