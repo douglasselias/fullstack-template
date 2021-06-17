@@ -2,8 +2,8 @@
   "scripts": {
     "start": "next",
     "commit": "commitlint --edit",
-    "test": "jest --watch --bail --runInBand",
-    "test:cov": "jest --bail --runInBand --coverage",
+    "test": "jest --watch --bail",
+    "test:cov": "jest --bail --coverage",
     "prepare": "husky install",
     "staged": "lint-staged"
   },
@@ -31,7 +31,7 @@
     "typescript": "^4.2.4"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "tsc && eslint --cache --fix",
+    "*.{ts,tsx}": "tsc && eslint --cache --fix && jest --bail --findRelatedTests",
     "*.{ts,tsx,css,md,json}": "prettier --write"
   }
 }
