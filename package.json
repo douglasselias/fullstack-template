@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "next",
-    "lint": "eslint --cache --fix",
+    "lint": "eslint --fix",
     "format": "prettier --write",
     "commit": "commitlint --edit",
     "test": "jest --watch --bail",
