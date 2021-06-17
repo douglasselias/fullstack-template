@@ -7,7 +7,7 @@ describe('Sample Describe', () => {
     expect(screen.getByText(/hello world/i)).toBeInTheDocument()
   })
 
-  test('hello', () => {
+  it('expects correctly', () => {
     expect(true).toBe(true)
   })
 })
