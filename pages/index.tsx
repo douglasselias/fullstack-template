@@ -1,26 +1,22 @@
-import { Heading } from '@chakra-ui/react'
-import { Input } from '@chakra-ui/react'
-import { Button } from '@chakra-ui/react'
 import { VStack } from '@chakra-ui/react'
+
+import { PrimaryButton, SecondaryButton, Input, Heading } from '@/components'
+
+function onClick() {
+  console.log()
+}
 
 function Index() {
   return (
     <>
       <VStack spacing={4} maxWidth="40rem">
-        <Heading>Clean Arch</Heading>
-        <label>
-          E-mail
-          <Input />
-        </label>
-        <label>
-          Senha
-          <Input />
-        </label>
+        <Heading text="Exemplo Arquitetura Limpa" />
 
-        <Button colorScheme="blue" isFullWidth>
-          Sign In
-        </Button>
-        <Button isFullWidth>Reset Password</Button>
+        <Input label="E-mail" />
+        <Input label="Senha" />
+
+        <PrimaryButton text="Login" onClick={onClick} />
+        <SecondaryButton text="Redefinir Senha" onClick={onClick} />
       </VStack>
     </>
   )
