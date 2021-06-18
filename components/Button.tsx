@@ -1,14 +1,16 @@
 import { Button as ChakraButton } from '@chakra-ui/react'
 
-export function FullWidthButton(props: Omit<Props, 'isFullWidth'>) {
-  return Button({ ...props, isFullWidth: true })
-}
+export const PrimaryButton = ({ text, onClick }: Omit<Props, 'color'>) =>
+  Button({ text, onClick, color: 'blue' })
 
-export function Button(props: Props) {
-  const { text, color, isFullWidth } = props
+export const SecondaryButton = ({ text, onClick }: Omit<Props, 'color'>) =>
+  Button({ text, onClick })
+
+function Button(props: Props) {
+  const { text, onClick, color } = props
 
   return (
-    <ChakraButton colorScheme={color} isFullWidth={isFullWidth}>
+    <ChakraButton onClick={onClick} colorScheme={color} isFullWidth>
       {text}
     </ChakraButton>
   )
@@ -16,23 +18,6 @@ export function Button(props: Props) {
 
 type Props = {
   text: string
+  onClick(): void
   color?: 'blue'
-  isFullWidth?: boolean
-}
-
-const bProps = {}
-
-function propsBuilder(text: string) {
-  return { ...bProps, text }
-}
-
-const colorBlueProp = (bProps: Props) => ({ ...bProps, color: 'blue' })
-const isFullWidthProp = (bProps: Props) => ({ ...bProps, isFullWidth: true })
-
-pipe(colorBlueProp, isFullWidthProp)(bProps)
-
-function pipe(...fns: any) {
-  return (initialValue: any) => {
-    return fns.reduce((acc: any, func: any) => func(acc), initialValue)
-  }
 }
