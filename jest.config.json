@@ -3,7 +3,10 @@
   "collectCoverageFrom": [
     "<rootDir>/**/*.{ts,tsx}",
     "!<rootDir>/pages/**",
-    "!**/*.d.ts"
+    "!**/*.d.ts",
+    "!**/components/**",
+    "!**/entities/**",
+    "!**/pipe/**"
   ],
   "coverageThreshold": {
     "global": {

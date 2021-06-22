@@ -1,7 +1,5 @@
 import { screen, render, fireEvent, act } from '@testing-library/react'
-// import user from '@testing-library/user-event'
 
-// import { act } from 'react-dom/test-utils'
 import { Presentation } from './presentation'
 
 describe('Search Restaurants - Presentation', () => {
@@ -17,6 +15,23 @@ describe('Search Restaurants - Presentation', () => {
     })
 
     expect(useCase).toHaveBeenCalledWith('outback')
-    // expect(screen.getAllByAltText('outback')).toThrow()
+  })
+
+  it('returns list of restaurants', async () => {
+    const useCase = jest
+      .fn()
+      .mockResolvedValue([
+        { name: 'outback - iguatemi' },
+        { name: 'outback - dom pedro' },
+      ])
+    act(() => {
+      render(<Presentation useCase={useCase} />)
+    })
+
+    const restaurant0 = await screen.findByText(/iguatemi/i)
+    const restaurant1 = await screen.findByText(/dom pedro/i)
+
+    expect(restaurant0).toBeInTheDocument()
+    expect(restaurant1).toBeInTheDocument()
   })
 })
