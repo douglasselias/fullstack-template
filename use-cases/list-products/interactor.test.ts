@@ -1,7 +1,7 @@
 import { interactor } from './interactor'
 
 describe('List Products - Interactor', () => {
-  it('returns empty list when no restaurant IDd is provided', async () => {
+  it('returns empty list when no restaurant ID is provided', async () => {
     const repository = jest.fn()
     const listProducts = interactor(repository)
     const restaurantID = ''
