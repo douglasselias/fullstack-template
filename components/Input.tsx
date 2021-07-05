@@ -12,5 +12,5 @@ export function Input(props: Props) {
 
 type Props = {
   label: string
-  onChange: ChangeEventHandler<HTMLInputElement>
+  onChange?: ChangeEventHandler<HTMLInputElement>
 }

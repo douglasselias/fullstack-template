@@ -24,11 +24,3 @@
 - npx mrm@2 lint-staged
 
 ---
-
-# Ideias
-
-- Ifood
-- Listar restaurantes
-- Listar produtos
-- Fazer pedido
-- Acompanhar pedido
