@@ -3,14 +3,12 @@ import { screen, render, act } from '@testing-library/react'
 import { Presentation } from './presentation'
 
 describe('List Products - Presentation', () => {
-  it('returns list of restaurants', async () => {
-    const useCase = jest
-      .fn()
-      .mockResolvedValue([
-        { name: 'Hamburger' },
-        { name: 'Batata Frita' },
-        { name: 'Chá Gelado' },
-      ])
+  it('returns list of products from restaurant', async () => {
+    const useCase = jest.fn().mockResolvedValue([
+      { id: 1, name: 'Hamburger' },
+      { id: 2, name: 'Batata Frita' },
+      { id: 3, name: 'Chá Gelado' },
+    ])
     act(() => {
       render(<Presentation useCase={useCase} restaurantID={'abc-123'} />)
     })

@@ -3,7 +3,7 @@ import { screen, render, fireEvent, act } from '@testing-library/react'
 import { Presentation } from './presentation'
 
 describe('Search Restaurants - Presentation', () => {
-  it('returns empty list when no query is provided', async () => {
+  it('calls use case with specified query', async () => {
     const useCase = jest.fn().mockResolvedValue([])
     act(() => {
       render(<Presentation useCase={useCase} />)
@@ -17,19 +17,25 @@ describe('Search Restaurants - Presentation', () => {
     expect(useCase).toHaveBeenCalledWith('outback')
   })
 
-  it('returns list of restaurants', async () => {
-    const useCase = jest
-      .fn()
-      .mockResolvedValue([
-        { name: 'outback - iguatemi' },
-        { name: 'outback - dom pedro' },
-      ])
+  it('returns all restaurants', async () => {
+    const useCase = jest.fn().mockResolvedValue([
+      {
+        id: 1,
+        name: 'outback',
+        deliveryTimeRange: [0, 0],
+      },
+      {
+        id: 2,
+        name: 'casa do yakisoba',
+        deliveryTimeRange: [0, 0],
+      },
+    ])
     act(() => {
       render(<Presentation useCase={useCase} />)
     })
 
-    const restaurant0 = await screen.findByText(/iguatemi/i)
-    const restaurant1 = await screen.findByText(/dom pedro/i)
+    const restaurant0 = await screen.findByText(/outback/i)
+    const restaurant1 = await screen.findByText(/yakisoba/i)
 
     expect(restaurant0).toBeInTheDocument()
     expect(restaurant1).toBeInTheDocument()
