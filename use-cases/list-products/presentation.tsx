@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { Product } from '@/entities/product'
+import { Product } from '@/entities'
 
 import { UseCase } from './usecase'
 

@@ -1,4 +1,5 @@
-import { Product } from '@/entities/product'
+import { Product } from '@/entities'
+
 import { Repository } from './repository'
 
 export function interactor(repository: Repository) {

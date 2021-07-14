@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { OrderStatus } from './usecase'
-
-import { UseCase } from './usecase'
+import { OrderStatus, UseCase } from './usecase'
 
 export function Presentation(props: Props) {
   const { useCase, orderID } = props

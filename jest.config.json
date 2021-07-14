@@ -4,9 +4,9 @@
     "<rootDir>/**/*.{ts,tsx}",
     "!<rootDir>/pages/**",
     "!**/*.d.ts",
+    "!**/index.ts",
     "!**/components/**",
-    "!**/entities/**",
-    "!**/pipe/**"
+    "!**/entities/**"
   ],
   "coverageThreshold": {
     "global": {

@@ -1,3 +1,3 @@
-import { Product } from '@/entities/product'
+import { Product } from '@/entities'
 
 export type UseCase = (restaurantID: string) => Promise<Product[]>

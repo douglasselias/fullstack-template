@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { VStack } from '@chakra-ui/react'
 
 import { Input } from '@/components'
 
@@ -17,14 +18,14 @@ export function Presentation(props: Props) {
   }, [query])
 
   return (
-    <>
+    <VStack spacing={4} maxWidth="40rem">
       <Input label="Pesquisar" onChange={(e) => setQuery(e.target.value)} />
       <ul>
         {restaurants.map((r) => (
           <li key={r.name}>{r.name}</li>
         ))}
       </ul>
-    </>
+    </VStack>
   )
 }
 

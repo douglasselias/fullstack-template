@@ -1,4 +1,4 @@
-import { Order, PaymentMethod, ProductOrder } from '@/entities/order'
+import { Order, PaymentMethod, ProductOrder } from '@/entities'
 
 export type UseCase = (props: Props) => Promise<Order>
 
