@@ -6,7 +6,8 @@
     "!**/*.d.ts",
     "!**/index.ts",
     "!**/components/**",
-    "!**/entities/**"
+    "!**/entities/**",
+    "!**/fake-*.ts"
   ],
   "coverageThreshold": {
     "global": {
