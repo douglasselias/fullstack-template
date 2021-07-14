@@ -1,4 +1,4 @@
-import { Order, PaymentMethod, ProductOrder } from '@/entities'
+import { PaymentMethod, ProductOrder } from '@/entities'
 
 export type Repository = (props: Props) => Promise<OrderID>
 
