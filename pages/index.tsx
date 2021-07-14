@@ -1,25 +1,7 @@
-import { VStack } from '@chakra-ui/react'
-
-import { PrimaryButton, SecondaryButton, Input, Heading } from '@/components'
-
-function onClick() {
-  console.log()
-}
+import { Presentation, interactor, http } from '@/use-cases/search-restaurants'
 
 function Index() {
-  return (
-    <>
-      <VStack spacing={4} maxWidth="40rem">
-        <Heading text="Exemplo Arquitetura Limpa" />
-
-        <Input label="E-mail" />
-        <Input label="Senha" />
-
-        <PrimaryButton text="Login" onClick={onClick} />
-        <SecondaryButton text="Redefinir Senha" onClick={onClick} />
-      </VStack>
-    </>
-  )
+  return <Presentation useCase={interactor(http)} />
 }
 
 export default Index
